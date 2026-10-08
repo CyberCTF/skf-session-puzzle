@@ -1,0 +1,14 @@
+{
+  "title": "OWASP SKF Session Puzzling",
+  "description": "A Flask application with a login, a dashboard and a forgot-password form. The forgot-password flow writes the same session variables the login uses.",
+  "question": "Reach another user's dashboard without their password by abusing the session variables the forgot-password flow sets (session puzzling).",
+  "category": "WEB",
+  "difficulty": 2,
+  "evidence_kind": "SECRET",
+  "capabilities": [
+    "session-puzzling",
+    "authentication-bypass",
+    "session",
+    "logic-flaw"
+  ]
+}
