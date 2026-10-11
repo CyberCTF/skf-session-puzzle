@@ -1,0 +1,43 @@
+{
+  "objectives": [
+    {
+      "key": "main",
+      "title": "Read the flag",
+      "prompt": "Reach another user's dashboard and retrieve the flag (/ctf/flag).",
+      "check": {
+        "evidence": "SECRET",
+        "format": "FLAG{%s}"
+      },
+      "dev": "FLAG{dev-skf-session-puzzle}",
+      "hints": [
+        "Two different flows write the same session variable.",
+        "Read about session puzzling, also called session variable overloading."
+      ],
+      "steps": [
+        {
+          "key": "route",
+          "title": "Find the second flow",
+          "prompt": "Which route sets the same session variables as the login? (path)",
+          "check": {
+            "answer": [
+              "/forgot",
+              "forgot"
+            ]
+          }
+        },
+        {
+          "key": "class",
+          "title": "Name the weakness",
+          "prompt": "What class of vulnerability is this?",
+          "check": {
+            "answer": [
+              "session puzzling",
+              "session variable overloading",
+              "session puzzle"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
